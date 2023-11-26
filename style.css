@@ -95,7 +95,7 @@ header.active .navbar a{
     gap: 1rem;
 } 
 .home-text{
-    /* flex: 29rem 29rem 29rem; */
+    
     position: absolute;
     left: 120px; 
     
@@ -104,7 +104,7 @@ header.active .navbar a{
     width: 470px;
     position: absolute;
     right: 100px; 
-    /* flex: 1 1 29rem; */
+    
 }
 .home-text span{
     font-size: 1rem;
