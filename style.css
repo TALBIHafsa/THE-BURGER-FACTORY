@@ -189,12 +189,15 @@ header.active .navbar a{
     margin-top: rem;
     text-transform: uppercase;
 }
+.kitchen-title p{
+    color: #fff
+}
 .kitchen{ 
     text-align: center;
     width:100%;
     min-height:100vh ;
     flex-wrap: wrap;
-    background-color:rgb(239, 209, 169);
+    background: url(images/black\ board.jpg);
     background-repeat: no-repeat ;
     background-size: cover;
     background-position: center;
@@ -212,6 +215,7 @@ header.active .navbar a{
     width: 700px;
     height: 700px;
     background-color: #f1e7e7;
+    border: 60px solid #000;
     border: 70px solid #d3cfcf;
     border-radius: 50%;
     border-style:dashed;
