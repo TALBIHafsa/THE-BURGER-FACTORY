@@ -190,14 +190,15 @@ header.active .navbar a{
     text-transform: uppercase;
 }
 .kitchen-title p{
-    color: #fff
+    color: #000000
 }
 .kitchen{ 
     text-align: center;
     width:100%;
     min-height:100vh ;
     flex-wrap: wrap;
-    background: url(images/black\ board.jpg);
+    /* background: url(images/black\ board.jpg); */
+    background-color:rgb(239, 209, 169) ;
     background-repeat: no-repeat ;
     background-size: cover;
     background-position: center;
@@ -205,17 +206,16 @@ header.active .navbar a{
 }
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     height: 100vh; /* This ensures the container takes the full height of the viewport */
-
+    margin-left: 100px;
   }
   
   .plate {
     width: 700px;
     height: 700px;
     background-color: #f1e7e7;
-    border: 60px solid #000;
     border: 70px solid #d3cfcf;
     border-radius: 50%;
     border-style:dashed;
@@ -255,5 +255,45 @@ header.active .navbar a{
 	border-radius: 5px;
     border-radius: 50% 50% 50% 50%; 
 	transform: rotateX(10deg);
-    box-shadow: 0 0 30px rgba(134, 75, 7, 0.2); 
+    box-shadow: 30px 30px 70px rgba(134, 75, 7, 0.2); 
+}
+.choicesbar{
+    display: flex;
+    /* display:inline-flex; */
+    margin-left: 950px;
+    margin-top: 30px;
+}
+.choicesbar a {
+    font-size: 3rem;
+    padding: 7px 20px;
+    font-weight: 500;
+}
+.choicesbar a:hover{
+    background: var(--second-color);
+    border-radius: 50%;
+}
+.icon{
+    width: 50px;
+}
+
+.choices{
+    
+    background: #fff;
+    
+    flex-wrap: wrap;
+    margin-left: 55rem;
+    margin-right: 1rem;
+    margin-bottom: -9.5rem;
+    margin-top: 0.6rem;
+    align-items: center;
+    border-radius: 10px;
+    border-top: 6px solid var(--main-color);
+    padding: 20px;
+    gap: 2rem;
+    flex: 1 1 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
 }
