@@ -192,12 +192,12 @@ header.active .navbar a{
 .kitchen-title p{
     font-size: 1.2rem;
     font-weight: 500;
-    color: #fff;
+    color: beige;
 }
 .kitchen{ 
     text-align: center;
     width:100%;
-    min-height:100vh ;
+    min-height:113vh ;
     flex-wrap: wrap;
     background: url(images/background/vecteezy_drawing-cartoon-art-of-bright-wood-texture-pattern-landscape_18735545.jpg);
     /* background-color:rgb(239, 209, 169) ; */
@@ -215,10 +215,10 @@ header.active .navbar a{
   }
   
 .plate {
-    
-    width: 700px;
-    margin-top: -300px;
-    height: 700px;
+    position: absolute;
+    width: 670px;
+    height: 670px;
+    margin-top: px;
     background-color: #f1e7e7;
     border: 70px solid #d3cfcf;
     border-radius: 50%;
@@ -244,7 +244,7 @@ header.active .navbar a{
 	position: relative;
 	margin: auto;
 	background-color: #fed;
-	border: 12px solid #f8af6c;
+	border: 12px solid rgb(244, 168, 96);
     border-top: none;
 	border-radius: 50% 50% 50% 50%;
 	transform: perspective(20em) rotateX(45deg);
@@ -255,7 +255,7 @@ header.active .navbar a{
 	width: 320px;
 	height: 300px;
 	margin: auto;
-	background-color: #f8af6c;
+	background-color: rgb(244, 168, 96);
 	border-radius: 5px;
     border-radius: 50% 50% 50% 50%; 
 	transform: rotateX(10deg);
@@ -263,20 +263,23 @@ header.active .navbar a{
 }
 .choicesbar{
     display: flex;
-    /* display:inline-flex; */
+    position: absolute;
 
     margin-left: 845px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .choicesbar a {
     font-size: 3rem;
     padding: 1px 15px;
    
 }
-/* .choicesbar a:hover{
-    background:rgb(245, 186, 109) ;
-    border-radius: 35%;
-} */
+
+.icon:hover{
+transform: scale(1.1);
+transition: 0.5s;
+}
+
+   
 .icon{
     width: 67px;
 }
@@ -287,14 +290,15 @@ header.active .navbar a{
     flex-wrap: wrap;
     align-items: center;
     border-radius: 10px;
-    border-top: 6px solid var(--main-color);
+    border-top: 6px solid var(--second-color);
     padding: 20px;
     gap: 2rem;
-
+    position: absolute;
+    top: 1400px;
     margin-left: 55rem;
     margin-right: 3.4rem;
-    margin-bottom: -9.5rem;
-    margin-top: 0.4rem;
+    margin-bottom: 100rem;
+    
 }
 .box-img{
     width: 100px;
@@ -319,22 +323,37 @@ header.active .navbar a{
     margin: 0 0 0.5rem;
 }
 
+.plus-button{
+    border: var(--main-color);
+    width: 26px;
+    height: 26px;
+    font-size: 1.2rem;
+    padding: px;
+    background: var(--second-color);
+    color:beige;
+    border-radius: 5rem;
 
+}
+.plus-button:hover{
+    background: var(--main-color);
+    transition: 0.2s all linear;
+}
 
  .ketchup{
 	background-color: #e62d2d;
 	border-right: 8px solid #d01d1d;
 	border-left: 8px solid #d01d1d;
-    top: -510px;
+    top: 85px;
+    left: 115px;
 	width: 220px;
 	height: 220px;
-	position: relative;
+	position: absolute;
 	margin: auto;
     border-top: none;
 	border-radius: 50% 50% 50% 50%;
 	transform: perspective(20em) rotateX(45deg);
 }
-.mayonnaise{
+ .mayonnaise{
 	background-color: rgb(255, 235, 193);
 	border-right: 8px solid rgb(241, 216, 167);
 	border-left: 8px solid rgb(241, 216, 167);
@@ -376,9 +395,9 @@ header.active .navbar a{
     border-top: none;
 	border-radius: 50% 50% 50% 50%;
 	transform: perspective(20em) rotateX(45deg);
-} 
+}  
 
-/* .beef-volume{
+ .beef-volume{
 
     content: '';
     background-color: rgb(120, 62, 34);
@@ -395,7 +414,7 @@ header.active .navbar a{
     border-radius: 50%;
 
 }
-.beef{
+.beef-slice{
 	background-color: rgb(145, 86, 45);
 	border-right: 8px solid rgb(120, 62, 34);
     border-left: 8px solid rgb(120, 62, 34);  
@@ -426,7 +445,7 @@ header.active .navbar a{
     border-radius: 50%;
 
 }
-.lamp{
+.lamp-slice{
 	background-color: rgb(188, 77, 0);
 	border-right: 8px solid rgb(156, 53, 0);
     border-left: 8px solid rgb(156, 53, 0);  
@@ -439,9 +458,9 @@ header.active .navbar a{
     border-top: none;
 	border-radius: 50% 50% 50% 50%;
 	transform: perspective(20em) rotateX(45deg);
-} */
+} 
 
-/* .chicken-volume{
+ .chicken-volume{
     content: '';
     background-color: rgb(222, 122, 17);
     top: 3px;
@@ -457,7 +476,7 @@ header.active .navbar a{
     border-radius: 50%;
 
 }
-.chicken{
+.chicken-slice{
 	background-color: rgb(255, 150, 18);
 	border-right: 8px solid rgb(222, 122, 17);
     border-left: 8px solid rgb(222, 122, 17);  
@@ -470,7 +489,7 @@ header.active .navbar a{
     border-top: none;
 	border-radius: 50% 50% 50% 50%;
 	transform: perspective(20em) rotateX(45deg);
-} */
+} 
 
 
 .turkey-volume{
@@ -489,7 +508,7 @@ header.active .navbar a{
     border-radius: 50%;
 
 }
-.turkey{
+.turkey-slice{
 	background-color: rgb(209, 122, 0);
 	border-right: 8px solid rgb(170, 100, 0);
     border-left: 8px solid rgb(170, 100, 0);  
@@ -502,11 +521,11 @@ header.active .navbar a{
     border-top: none;
 	border-radius: 50% 50% 50% 50%;
 	transform: perspective(20em) rotateX(45deg);
-}
+} 
 
 
 
-.onion-slices{
+ .onion-slices{
 	width: 110px;
 	height: 115px;
 	position: absolute;
@@ -599,7 +618,7 @@ header.active .navbar a{
 	left: 93px;
 	box-shadow: 130px 20px 0 #c874d2,
 				60px 120px 0 #c874d2;
-}
+} 
 
 
 
@@ -669,9 +688,7 @@ header.active .navbar a{
 	left: 175px;
 	box-shadow: -20px 120px 0 tomato,
 				120px 70px 0 tomato;
-}
-
-
+} 
 
 .lettuce {
     width: 180px;
@@ -738,9 +755,11 @@ header.active .navbar a{
       rgb(92, 142, 35) 20px
   
       );
-}
+} 
 
-.cheddar{
+
+
+ .cheddar{
      position: absolute;
     width: 230px;
     height: 255px;
@@ -806,5 +825,136 @@ header.active .navbar a{
 				110px 70px 0 rgb(244, 203, 40),
                 130px -40px 0 rgb(244, 203, 40),
                 70px 170px 0 rgb(244, 203, 40);
+} 
+
+
+
+.burger-top{
+    top: -60px;
+    left: 67px;
+	position: absolute;
+	width: 320px;
+	height: 300px;
+	background-color: rgb(244, 168, 96);
+    border-radius: 50% 50% 50% 50%; 
+	transform: rotateX(10deg);
+    box-shadow: 0 10px 6px rgb(190, 122, 28, 0.2),
+                0 0px 10px rgba(225, 152, 51, 0.2);
+
+} 
+.burger-top::before{
+    content: '';
+    top: 4px;
+    left: 10px;
+	position: absolute;
+	width: 264px;
+	height: 260px;
+	background-color: #f8af6c;
+    border-radius: 50% 50% 50% 50%; 
+	transform: rotateX(10deg);
+
 }
+
+.sesame{
+    top: 60px;
+    left: 100px;
+	position: absolute;
+	width: 10px;
+	height: 15px;
+	background-color: rgb(255, 210, 168);
+    border-radius: 0% 50% 50% 50%; 
+	transform: rotateX(10deg);
+    box-shadow: 110px 110px 0px rgb(255, 210, 168),
+    63px 55px 0px rgb(255, 210, 168),
+    95px -41px 0px rgb(255, 210, 168),
+    37px 77px 0px rgb(255, 210, 168),
+    103px 40px 0px rgb(255, 210, 168),
+    20px -50px 0px rgb(255, 210, 168),
+    209px 10px 0px rgb(255, 210, 168),
+    252px 0px 0px rgb(241, 186, 135),
+    182px -72px 0px rgb(255, 210, 168),
+    147px -69px 0px rgb(255, 210, 168),
+    141px 62px 0px rgb(255, 210, 168),
+    42px -5px 0px rgb(255, 210, 168),
+    60px -93px 0px rgb(255, 210, 168),
+    143px 14px 0px rgb(255, 210, 168),
+                190px 90px 0px rgb(255, 210, 168);
+}  
+
+
+
+.button{
+    padding: 10px 20px;
+    position: relative;
+    top:115px;
+    left:414px ;
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    color:var(--second-color);
+    font-weight: 500;
+
+}
+.button:hover{
+    letter-spacing: 2px;
+    color: #fff;
+    background: var(--second-color);
+}
+
+.congrat{
+    position: absolute;
+    right: 30px;
+    bottom: -1020px;
+
+}
+.congrat h2{
+    font-size: 3.5rem;
+    font-weight:450;
+    color: var(--second-color);
+    border-color: #fed;
+}
+.congrat p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: beige;
+}
+.shine{
+    position: absolute;
+    width: 120px;
+    left: 200px;
+    top:1400px;
+}
+.downloadButton{
+    padding: 10px 20px;
+    position: relative;
+    top:-15px;
+    left: 945px ;
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    color:var(--second-color);
+    font-weight: 500;
+
+}
+.downloadButton:hover{
+   letter-spacing: 2px;
+    color: #fff;
+    background: var(--second-color);
+
+}
+.anothertryButton{
+    padding: 10px 20px;
+    position: relative;
+    top:-10px;
+    left: 925px ;
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    color:var(--second-color);
+    font-weight: 500;
+
+}
+.anothertryButton:hover{
+    letter-spacing: 2px;
+     color: #fff;
+     background: var(--second-color);
+ 
+ }
 
