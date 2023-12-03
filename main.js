@@ -24,12 +24,25 @@ for (var i = 0; i < icons.length; i++) {
 }
 
 
+// replace the meat choices
+var button = document.getElementsByClassName('plus-button-meat');
+for (var i = 0; i < button.length; i++) {
+  button[i].addEventListener('click', function() {
+    var type = this.getAttribute('data-type');
+    var meat = document.getElementsByClassName('meat');
+    for (var j = 0; j < meat.length; j++) {
+      if (meat[j].id === type + '-meat') {
+        
+        meat[j].style.display = 'block';  // Show the table corresponding to the clicked icon
+      } else {
+        meat[j].style.display = 'none';  // Hide the other tables
+      }
+    }
+  });
+}
 
 
-
-
-
-
+// turn + to - when it's clicked
 document.querySelectorAll('.plus-button').forEach(button => {
   button.addEventListener('click', function() {
     if (this.textContent === '+') {
@@ -85,6 +98,7 @@ document.getElementById('hotsauceadd').addEventListener('click', function() {
     hot.style.display = 'none';   
   }
 });
+
 
 // add turkey to the burger
 document.getElementById('turkeyadd').addEventListener('click', function() {
@@ -211,7 +225,7 @@ document.getElementById('americancheeseadd').addEventListener('click', function(
 
 
 
-  // add burgertop to the burger
+  // next and finish buttons
 document.getElementById('finishbutton').addEventListener('click', function() {
   var burgertop = document.getElementById('burgertop');
   burgertop.style.display = 'block';  
@@ -267,6 +281,8 @@ document.getElementById('next3').addEventListener('click', function() {
 
 
 
+
+// download button
 document.getElementById('downloadButton').addEventListener('click', function() {
   const burgerContent = document.querySelector('.kitchen');
   html2canvas(burgerContent).then(function(canvas) {

@@ -222,8 +222,8 @@ header.active .navbar a{
     background-color: #f1e7e7;
     border: 70px solid #d3cfcf;
     border-radius: 50%;
-    border-style:dashed;
-    /* border-style:double; */
+    /* border-style:dashed; */
+    border-style:double;
     box-shadow: 0 0 100px rgba(134, 75, 7, 0.2); 
     transform: rotateX(45deg) rotateY(0deg) rotateZ(0deg); 
 }
@@ -300,6 +300,7 @@ transition: 0.5s;
     margin-bottom: 100rem;
     
 }
+
 .box-img{
     width: 100px;
     height: 100px;
@@ -334,11 +335,25 @@ transition: 0.5s;
     border-radius: 5rem;
 
 }
+.plus-button-meat{
+    border: var(--main-color);
+    width: 26px;
+    height: 26px;
+    font-size: 1.2rem;
+    padding: px;
+    background: var(--second-color);
+    color:beige;
+    border-radius: 5rem;
+
+}
 .plus-button:hover{
     background: var(--main-color);
     transition: 0.2s all linear;
 }
-
+.plus-button-meat:hover{
+    background: var(--main-color);
+    transition: 0.2s all linear;
+}
  .ketchup{
 	background-color: #e62d2d;
 	border-right: 8px solid #d01d1d;
