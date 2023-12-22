@@ -5,6 +5,10 @@ window.addEventListener('scroll',()=>{
     header.classList.toggle('active',window.scrollY>0);
 });
 
+//refresh 
+function refreshPage() {
+  location.reload();
+}
 
 
 //Add event listeners to the icons
@@ -15,32 +19,13 @@ for (var i = 0; i < icons.length; i++) {
     var choices = document.getElementsByClassName('choices');
     for (var j = 0; j < choices.length; j++) {
       if (choices[j].id === type + '-choices') {
-        choices[j].style.display = 'flex';  // Show the table corresponding to the clicked icon
+        choices[j].style.display = 'grid';  // Show the table corresponding to the clicked icon
       } else {
         choices[j].style.display = 'none';  // Hide the other tables
       }
     }
   });
 }
-
-
-// replace the meat choices
-var button = document.getElementsByClassName('plus-button-meat');
-for (var i = 0; i < button.length; i++) {
-  button[i].addEventListener('click', function() {
-    var type = this.getAttribute('data-type');
-    var meat = document.getElementsByClassName('meat');
-    for (var j = 0; j < meat.length; j++) {
-      if (meat[j].id === type + '-meat') {
-        
-        meat[j].style.display = 'block';  // Show the table corresponding to the clicked icon
-      } else {
-        meat[j].style.display = 'none';  // Hide the other tables
-      }
-    }
-  });
-}
-
 
 // turn + to - when it's clicked
 document.querySelectorAll('.plus-button').forEach(button => {
@@ -58,179 +43,210 @@ document.querySelectorAll('.plus-button').forEach(button => {
 
 
 
+// Element arrays
+const beefElements = [document.getElementById('beef'), document.getElementById('beef2'), document.getElementById('beef3')];
+const lambElements = [document.getElementById('lamb'), document.getElementById('lamb2'), document.getElementById('lamb3')];
+const chickenElements = [document.getElementById('chicken'), document.getElementById('chicken2'), document.getElementById('chicken3')];
+const turkeyElements = [document.getElementById('turkey'), document.getElementById('turkey2'), document.getElementById('turkey3')];
 
-// add ketchup to the burger
-document.getElementById('ketchupadd').addEventListener('click', function() {
-  var ketchup = document.getElementById('ketchup');
-  if (ketchup.style.display === 'none') {
-    ketchup.style.display = 'block';   
-  } else {
-    ketchup.style.display = 'none';   
-  }
-});
+// Layer count elements
+const layerCounts = {
+  beef: document.getElementById('layerCountbeef'),
+  lamb: document.getElementById('layerCountlamb'),
+  chicken: document.getElementById('layerCountchicken'),
+  turkey: document.getElementById('layerCountturkey'),
+};
 
-// add mayonnaise to the burger
-document.getElementById('mayonnaiseadd').addEventListener('click', function() {
-  var mayonnaise = document.getElementById('mayonnaise');
-  if (mayonnaise.style.display === 'none') {
-    mayonnaise.style.display = 'block';   
-  } else {
-    mayonnaise.style.display = 'none';   
-  }
-});
+// Layer counts
+const layerCountsMap = {
+  beef: 0,
+  lamb: 0,
+  chicken: 0,
+  turkey: 0,
+};
 
-// add mustard to the burger
-document.getElementById('mustardadd').addEventListener('click', function() {
-  var mustard = document.getElementById('mustard');
-  if (mustard.style.display === 'none') {
-    mustard.style.display = 'block';   
-  } else {
-    mustard.style.display = 'none';   
-  }
-});
+// Function to update layer counts
+function updateLayerCount(elementName) {
+  layerCounts[elementName].textContent = layerCountsMap[elementName];
+}
 
-// add hot-sauce to the burger
-document.getElementById('hotsauceadd').addEventListener('click', function() {
-  var hot = document.getElementById('hot-sauce');
-  if (hot.style.display === 'none') {
-    hot.style.display = 'block';   
-  } else {
-    hot.style.display = 'none';   
-  }
-});
+// Function to update buttons
+function updateButtons(elementName) {
+  const addBtn = document.getElementById(`${elementName}add`);
+  const removeBtn = document.getElementById(`${elementName}remove`);
+
+  addBtn.disabled = layerCountsMap[elementName] === 3;
+  removeBtn.disabled = layerCountsMap[elementName] === 0;
+}
+
+// Function to handle adding layers
+// function addLayer(elementArray, elementName) {
+//   const currentLayer = layerCountsMap[elementName];
+//   elementArray[currentLayer].style.display = 'block';
+//   layerCountsMap[elementName]++;
+//   updateLayerCount(elementName);
+//   updateButtons(elementName);
+
+// }
 
 
-// add turkey to the burger
-document.getElementById('turkeyadd').addEventListener('click', function() {
-  var turkey = document.getElementById('turkey');
-  if (turkey.style.display === 'none') {
-    turkey.style.display = 'block';   
-  } else {
-    turkey.style.display = 'none';   
-  }
-});
 
-// add beef to the burger
-document.getElementById('beefadd').addEventListener('click', function() {
-  var beef = document.getElementById('beef');
-  if (beef.style.display === 'none') {
-    beef.style.display = 'block';   
-  } else {
-    beef.style.display = 'none';   
-  }
-});
+// Function to handle adding layers and reset other types
+function addLayer(elementArray, elementName) {
+  // Reset other types
+  Object.keys(layerCountsMap).forEach(key => {
+    if (key !== elementName && layerCountsMap[key] > 0) {
+      const otherElements = eval(`${key}Elements`); // Accessing other element arrays dynamically
+      otherElements.forEach(elem => {
+        elem.style.display = 'none'; // Hide other type elements
+      });
+      layerCountsMap[key] = 0; // Reset count to zero
+      updateLayerCount(key); // Update displayed count
+      updateButtons(key); // Update buttons
+    }
+  });
 
-// add lamp to the burger
-document.getElementById('lampadd').addEventListener('click', function() {
-  var lamp = document.getElementById('lamp');
-  if (lamp.style.display === 'none') {
-    lamp.style.display = 'block';   
-  } else {
-    lamp.style.display = 'none';   
-  }
-});
+  // Add layers for the selected type
+  const currentLayer = layerCountsMap[elementName];
+  elementArray[currentLayer].style.display = 'block';
+  layerCountsMap[elementName]++;
+  updateLayerCount(elementName);
+  updateButtons(elementName);
+}
 
-// add chicken to the burger
-document.getElementById('chickenadd').addEventListener('click', function() {
-  var chicken = document.getElementById('chicken');
-  if (chicken.style.display === 'none') {
-    chicken.style.display = 'block';   
-  } else {
-    chicken.style.display = 'none';   
-  }
-});
 
-// add onion to the burger
-document.getElementById('onionadd').addEventListener('click', function() {
-  var onion = document.getElementById('onion');
-  if (onion.style.display === 'none') {
-    onion.style.display = 'block';   
-  } else {
-    onion.style.display = 'none';   
-  }
-});
 
-// add tomato to the burger
-document.getElementById('tomatoadd').addEventListener('click', function() {
-  var tomato = document.getElementById('tomato');
-  if (tomato.style.display === 'none') {
-    tomato.style.display = 'block';   
-  } else {
-    tomato.style.display = 'none';   
-  }
-});
 
-// add lettuce to the burger
-document.getElementById('lettuceadd').addEventListener('click', function() {
-  var lettuce = document.getElementById('lettuce');
-  if (lettuce.style.display === 'none') {
-    lettuce.style.display = 'block';   
-  } else {
-    lettuce.style.display = 'none';   
-  }
-});
+// Function to handle removing layers
+function removeLayer(elementArray, elementName) {
+  const currentLayer = layerCountsMap[elementName] - 1;
+  elementArray[currentLayer].style.display = 'none';
+  layerCountsMap[elementName]--;
+  updateLayerCount(elementName);
+  updateButtons(elementName);
+}
 
-// add pickles to the burger
-document.getElementById('picklesadd').addEventListener('click', function() {
-  var pickles = document.getElementById('pickles');
-  if (pickles.style.display === 'none') {
-    pickles.style.display = 'block';   
-  } else {
-    pickles.style.display = 'none';   
-  }
-});
+// Event listeners for adding and removing layers
+function addRemoveListeners(addBtn, removeBtn, elementArray, elementName) {
+  addBtn.addEventListener('click', () => addLayer(elementArray, elementName));
+  removeBtn.addEventListener('click', () => removeLayer(elementArray, elementName));
+}
 
-// add cheddar to the burger
-document.getElementById('cheddaradd').addEventListener('click', function() {
-  var cheddar = document.getElementById('cheddar');
-  if (cheddar.style.display === 'none') {
-    cheddar.style.display = 'block';   
-  } else {
-    cheddar.style.display = 'none';   
-  }
-});
+// Adding listeners for each element
+addRemoveListeners(beefadd, beefremove, beefElements, 'beef');
+addRemoveListeners(lambadd, lambremove, lambElements, 'lamb');
+addRemoveListeners(chickenadd, chickenremove, chickenElements, 'chicken');
+addRemoveListeners(turkeyadd, turkeyremove, turkeyElements, 'turkey');
 
-// add mozzarella to the burger
-document.getElementById('mozzarellaadd').addEventListener('click', function() {
-  var mozzarella = document.getElementById('mozzarella');
-  if (mozzarella.style.display === 'none') {
-    mozzarella.style.display = 'block';   
-  } else {
-    mozzarella.style.display = 'none';   
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function to toggle the display of an element based on its ID
+function toggleElementDisplay(elementId) {
+  var element = document.getElementById(elementId);
+  element.style.display = element.style.display === 'none' ? 'block' : 'none';
+}
+
+// Event listeners for adding different burger sauce
+const sauce = [
+  'ketchup', 'mayonnaise', 'mustard', 'hotsauce'
+];
+
+sauce.forEach(sauce => {
+  document.getElementById(`${sauce}add`).addEventListener('click', function() {
+    toggleElementDisplay(sauce);
+  });
 });
 
 
-// add swisscheese to the burger
-document.getElementById('swisscheeseadd').addEventListener('click', function() {
-  var swisscheese = document.getElementById('swisscheese');
-  if (swisscheese.style.display === 'none') {
-    swisscheese.style.display = 'block';   
-  } else {
-    swisscheese.style.display = 'none';   
-  }
-});
 
-// add americancheese to the burger
-document.getElementById('americancheeseadd').addEventListener('click', function() {
-  var americancheese = document.getElementById('americancheese');
-  if (americancheese.style.display === 'none') {
-    americancheese.style.display = 'block';   
-  } else {
-    americancheese.style.display = 'none';   
-  }
+const aftermeat = ['onion', 'tomato', 'lettuce', 'pickles', 'cheddar', 'mozzarella', 'swisscheese', 'americancheese'];
+
+aftermeat.forEach(item => {
+  document.getElementById(`${item}add`).addEventListener('click', function() {
+    const meatLayerCount1 = Object.values(layerCountsMap).filter(count => count === 1).length;
+    const meatLayerCount2 = Object.values(layerCountsMap).filter(count => count === 2).length;
+    const meatLayerCount3 = Object.values(layerCountsMap).filter(count => count === 3).length;
+
+    if (meatLayerCount1 === 1) {
+      toggleElementDisplay(item);
+    } else if (meatLayerCount2 === 1) {
+      toggleElementDisplay(`${item}2`);
+    } else if (meatLayerCount3 === 1) {
+      toggleElementDisplay(`${item}3`);
+    }
+  });
 });
 
 
 
 
 
-  // next and finish buttons
+
+
+
+
+
+
+
+
+
+
+
+
+
+// next and finish buttons
 document.getElementById('finishbutton').addEventListener('click', function() {
   var burgertop = document.getElementById('burgertop');
-  burgertop.style.display = 'block';  
   var sesame = document.getElementById('sesame');
-  sesame.style.display = 'block';  
+  var burgertop2 = document.getElementById('burgertop2');
+  var sesame2 = document.getElementById('sesame2');
+  var burgertop3 = document.getElementById('burgertop3');
+  var sesame3 = document.getElementById('sesame3');
+
+
+  const meatLayerCount = Object.values(layerCountsMap).filter(count => count === 1).length;
+
+  if (meatLayerCount === 1) {
+    burgertop.style.display = 'block';
+    sesame.style.display = 'block';
+  }
+
+  const meatLayerCount2 = Object.values(layerCountsMap).filter(count => count === 2).length;
+
+  if (meatLayerCount2 === 1) {
+    burgertop2.style.display = 'block';
+    sesame2.style.display = 'block';
+  }
+
+  const meatLayerCount3 = Object.values(layerCountsMap).filter(count => count === 3).length;
+
+  if (meatLayerCount3 === 1) {
+    burgertop3.style.display = 'block';
+    sesame3.style.display = 'block';
+  }
+
+
+
   var choicesbar = document.getElementById('choicesbar');
   choicesbar.style.display = 'none'; 
   var choicescontainer = document.getElementById('choices-container');
@@ -241,42 +257,52 @@ document.getElementById('finishbutton').addEventListener('click', function() {
   congrat.style.display = 'block'; 
   var shine = document.getElementById('shine');
   shine.style.display = 'block';
-  var downloadButton = document.getElementById('downloadButton');
-  downloadButton.style.display = 'block';
-  var anothertryButton = document.getElementById('anothertryButton');
-  anothertryButton.style.display = 'block';
+  // var downloadButton = document.getElementById('downloadButton');
+  // downloadButton.style.display = 'block';
+  // var anothertryButton = document.getElementById('anothertryButton');
+  // anothertryButton.style.display = 'block';
 })
 
-document.getElementById('next1').addEventListener('click', function() {
-  var meat = document.getElementById('meat-choices');
-  meat.style.display = 'flex'; 
-  var sauce = document.getElementById('sauce-choices');
-  sauce.style.display = 'none';
-  var next = document.getElementById('next1');
-  next.style.display = 'none';
-  var next = document.getElementById('next2');
-  next.style.display = '';
-})
-document.getElementById('next2').addEventListener('click', function() {
-  var meat = document.getElementById('meat-choices');
-  meat.style.display = 'none'; 
-  var sauce = document.getElementById('toppings-choices');
-  sauce.style.display = 'flex';
-  var next = document.getElementById('next2');
-  next.style.display = 'none';
-  var next = document.getElementById('next3');
-  next.style.display = '';
-})
-document.getElementById('next3').addEventListener('click', function() {
-  var meat = document.getElementById('toppings-choices');
-  meat.style.display = 'none'; 
-  var sauce = document.getElementById('cheese-choices');
-  sauce.style.display = 'flex';
-  var next = document.getElementById('next3');
-  next.style.display = 'none';
-  var next = document.getElementById('finishbutton');
-  next.style.display = '';
-})
+// document.getElementById('next1').addEventListener('click', function() {
+//   var meat = document.getElementById('meat-choices');
+//   meat.style.display = 'flex'; 
+//   var sauce = document.getElementById('sauce-choices');
+//   sauce.style.display = 'none';
+//   var next = document.getElementById('next1');
+//   next.style.display = 'none';
+//   var next = document.getElementById('next2');
+//   next.style.display = '';
+// })
+// document.getElementById('next2').addEventListener('click', function() {
+//   var meat = document.getElementById('meat-choices');
+//   meat.style.display = 'none'; 
+//   var sauce = document.getElementById('toppings-choices');
+//   sauce.style.display = 'flex';
+//   var next = document.getElementById('next2');
+//   next.style.display = 'none';
+//   var next = document.getElementById('next3');
+//   next.style.display = '';
+// })
+// document.getElementById('next3').addEventListener('click', function() {
+//   var meat = document.getElementById('toppings-choices');
+//   meat.style.display = 'none'; 
+//   var sauce = document.getElementById('cheese-choices');
+//   sauce.style.display = 'flex';
+//   var next = document.getElementById('next3');
+//   next.style.display = 'none';
+//   var next = document.getElementById('finishbutton');
+//   next.style.display = '';
+// })
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +316,7 @@ document.getElementById('downloadButton').addEventListener('click', function() {
     document.body.appendChild(canvas); // Append the canvas to the DOM (for testing purposes)
     // Trigger the download of the canvas content as an image file
     var link = document.createElement('a');
-    link.download = 'custom_burger.png';
+    link.download = 'The_Burger_Factory.png';
     link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     link.click();
     document.body.removeChild(canvas); // Remove the canvas from the DOM
