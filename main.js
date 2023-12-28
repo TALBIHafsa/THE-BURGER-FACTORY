@@ -79,17 +79,6 @@ function updateButtons(elementName) {
   removeBtn.disabled = layerCountsMap[elementName] === 0;
 }
 
-// Function to handle adding layers
-// function addLayer(elementArray, elementName) {
-//   const currentLayer = layerCountsMap[elementName];
-//   elementArray[currentLayer].style.display = 'block';
-//   layerCountsMap[elementName]++;
-//   updateLayerCount(elementName);
-//   updateButtons(elementName);
-
-// }
-
-
 
 // Function to handle adding layers and reset other types
 function addLayer(elementArray, elementName) {
@@ -139,27 +128,6 @@ addRemoveListeners(chickenadd, chickenremove, chickenElements, 'chicken');
 addRemoveListeners(turkeyadd, turkeyremove, turkeyElements, 'turkey');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Function to toggle the display of an element based on its ID
 function toggleElementDisplay(elementId) {
   var element = document.getElementById(elementId);
@@ -196,21 +164,6 @@ aftermeat.forEach(item => {
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -257,55 +210,7 @@ document.getElementById('finishbutton').addEventListener('click', function() {
   congrat.style.display = 'block'; 
   var shine = document.getElementById('shine');
   shine.style.display = 'block';
-  // var downloadButton = document.getElementById('downloadButton');
-  // downloadButton.style.display = 'block';
-  // var anothertryButton = document.getElementById('anothertryButton');
-  // anothertryButton.style.display = 'block';
 })
-
-// document.getElementById('next1').addEventListener('click', function() {
-//   var meat = document.getElementById('meat-choices');
-//   meat.style.display = 'flex'; 
-//   var sauce = document.getElementById('sauce-choices');
-//   sauce.style.display = 'none';
-//   var next = document.getElementById('next1');
-//   next.style.display = 'none';
-//   var next = document.getElementById('next2');
-//   next.style.display = '';
-// })
-// document.getElementById('next2').addEventListener('click', function() {
-//   var meat = document.getElementById('meat-choices');
-//   meat.style.display = 'none'; 
-//   var sauce = document.getElementById('toppings-choices');
-//   sauce.style.display = 'flex';
-//   var next = document.getElementById('next2');
-//   next.style.display = 'none';
-//   var next = document.getElementById('next3');
-//   next.style.display = '';
-// })
-// document.getElementById('next3').addEventListener('click', function() {
-//   var meat = document.getElementById('toppings-choices');
-//   meat.style.display = 'none'; 
-//   var sauce = document.getElementById('cheese-choices');
-//   sauce.style.display = 'flex';
-//   var next = document.getElementById('next3');
-//   next.style.display = 'none';
-//   var next = document.getElementById('finishbutton');
-//   next.style.display = '';
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // download button

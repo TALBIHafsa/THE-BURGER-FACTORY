@@ -1,529 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UV-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build-A-Burger</title>
-  <!-- link to css -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- box icons -->
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <!-- canvas -->
-  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UV-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build-A-Burger</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- canvas -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
-  <link rel="icon" href="images/logoo.png" type="image/x-icon" />
-  <link rel="shortcut icon" href="images/logoo.png" type="image/x-icon" />
-</head>
-<body>
- <!-- Navbar -->
- <header> 
-  <a  href="#" class="logo"><img title="The Burger Factory" src="images/hamburger.png" alt="">B-A-B </a>></a>
-  <div class="bx bx-menu" id="menu-icon"></div> 
-  
-    <ul class="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#kitchen">Kitchen</a></li>
-      <!-- <li><a href="#codes">Codes</a></li> -->
-      <!-- <li><a href="#credit">Credit</a></li> -->
-   </ul> 
-  
- </header>
- <!-- Home -->
- <section class="home" id="home">
-  <div class="home-text">
-   <span>Welcome to  </span>
-   <h1>Build-A-Burger</h1>
-   <p> Where Taste Takes Flight, Design Your Bite!</p>
-   <a title="Don't wait, let's get started!" href="#kitchen" class="btn">Let's get started</a>
-  </div>
-  <div class="home-img">
-   <!-- <img src="images/logo 2.png" alt=""> -->
-   <img title="Looks delicious!" src="images/Capture d’écran 2023-11-26 001231-fotor-bg-remover-2023112602439.png" alt="">
-  </div>
- </section> 
- <!-- About-->
- <section class="about" id="about">
-  <!-- <h1>Our Preject</h1> -->
-  <div class="about-container">
+    <link rel="icon" href="images/logoo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/logoo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header> 
+      <a  href="#" class="logo"><img title="The Burger Factory" src="images/hamburger.png" alt="">B-A-B </a>></a>
+      <div class="bx bx-menu" id="menu-icon"></div> 
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#kitchen">Kitchen</a></li>
+        </ul> 
+    </header>
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="home-text">
+        <span>Welcome to  </span>
+        <h1>Build-A-Burger</h1>
+        <p> Where Taste Takes Flight, Design Your Bite!</p>
+        <a title="Don't wait, let's get started!" href="#kitchen" class="btn">Let's get started</a>
+      </div>
+      <div class="home-img">
+        <img title="Looks delicious!" src="images/Capture d’écran 2023-11-26 001231-fotor-bg-remover-2023112602439.png" alt="">
+      </div>
+    </section> 
+    <!-- About-->
+    <section class="about" id="about">
+      <div class="about-container">
+          <h3>Welcome to our revolutionary burger customization project! 🍔💻</h3>
+          <h2> Crafted using HTML, CSS, and JavaScript, this platform redefines burger customization. Dive into the code that powers your culinary creativity—our backend infrastructure seamlessly handles your selections, while the frontend interface, elegantly designed with HTML/CSS, ensures a smooth, responsive experience.
+            Watch as JavaScript brings your burger to life with instant updates as you choose toppings, sauces, and types of meat. This interactive playground merges programming finesse with culinary innovation. . Experience the blend of programming artistry and gourmet delight—your perfect burger is just a click away</h2>
+      </div>
+    </section>
+    <!-- Kitchen-->  
+    <section class="kitchen" id="kitchen">
+      <div class="kitchen-title">
+        <h2>The Kitchen</h2>
+        <p > The kitchen is yours now, you have the power to create the burger of your dreams!</p>
+      </div>
+      <!-- the choices bar --> 
+      <ul class="choicesbar" id="choicesbar">
+        <li><a title="Sauce" href="#kitchen#sauce-choices"><img class="icon" src="images/icons/saucec-removebg-preview.png" alt="Sauce Icon" id="sauce-icon" data-type="sauce" ></a></li>
+        <li><a title="Meat" href="#kitchen#meat-choices"><img class="icon" src="images/icons/meatc-removebg-preview.png" alt="Meat Icon" id="meat-icon" data-type="meat"></a></li>
+        <li><a title="Toppings" href="#kitchen#toppings-choices"><img class="icon" src="images/icons/toppingsc-removebg-preview.png" alt="Toppings Icon" id="toppings-icon" data-type="toppings"></a></li></a></li>
+        <li><a title="Cheese" href="#kitchen#cheese-choices"><img class="icon" src="images/icons/cheesec-removebg-preview.png" alt="Chesse Icon" id="cheese-icon" data-type="cheese"></a></li></a></li>
+      </ul>
+      <div class="choices-container" id="choices-container">
+        <!-- sauce choices -->
+        <div class="choices" id="sauce-choices" >
+          <!-- ketchup -->
+          <div class="box"  >
+            <div class="box-img">
+              <img class="boximg" src="images/sauce icons/ketchup.png" alt="Ketchup">
+            </div>
+            <h2>Ketchup</h2>
+            <button class="plus-button" id='ketchupadd'>+</button>
+          </div>
+          <!-- Mayonnaise -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/sauce icons/mayo.png" alt="Mayonnaise">
+            </div>
+            <h2>Mayonnaise</h2>
+            <button class="plus-button" id="mayonnaiseadd" >+</button>
+          </div>
+          <!-- mustard -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/sauce icons/mustard.png" alt="Mustard">
+            </div>
+            <h2>Mustard</h2>
+            <button class="plus-button" id="mustardadd">+</button>
+          </div>
+          <!-- hot sauce -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/sauce icons/hot sauce.png" alt="Hot sauce">
+            </div>
+            <h2>Hot sauce</h2>
+            <button class="plus-button" id="hotsauceadd">+</button>
+          </div>
+        </div>
+        <!-- meat choices -->
+        <div class="choices" id="meat-choices" style="display: none">
+          <!-- beef -->
+          <div class="box" >
+            <div class="box-img">  
+              <img src="images/meat icons/cow.png" alt="Beef">
+            </div>
+            <h2>Beef</h2>
+            <span id="layerCountbeef">0</span>
+            <button class="plus-button-meat" id="beefadd">+</button>
+            <button class="minus-button-meat" id="beefremove">-</button>
+          </div>
+          <!-- lamb -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/meat icons/lamb.png" alt="lamb">
+            </div>
+            <h2>lamb</h2>
+            <span id="layerCountlamb">0</span>
+            <button class="plus-button-meat" id="lambadd">+</button>
+            <button class="minus-button-meat" id="lambremove">-</button>
+          </div>
+          <!-- chicken -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/meat icons/poulet.png" alt="Chicken">
+            </div>
+            <h2>Chicken</h2>
+            <span id="layerCountchicken">0</span>
+            <button class="plus-button-meat"  id="chickenadd" >+</button>
+            <button class="minus-button-meat"  id="chickenremove" >-</button>
+          </div>
+          <!-- turkey -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/meat icons/turkey.png" alt="Turkey">
+            </div>
+            <h2>Turkey</h2>
+            <span id="layerCountturkey">0</span>
+            <button class="plus-button-meat" id="turkeyadd">+</button>
+            <button class="minus-button-meat" id="turkeyremove">-</button>
+          </div>
+        </div>
+        <div class="choices" id="toppings-choices"style="display: none">
+        <!-- onion -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/toppings icons/onion.png" alt="Onion">
+            </div>
+            <h2>Onion</h2>
+            <button class="plus-button" id="onionadd">+</button>
+          </div>
+          <!-- Tomato -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/toppings icons/tomato.png" alt="Tomato">
+            </div>
+            <h2>Tomato</h2>
+            <button class="plus-button" id="tomatoadd">+</button>
+          </div>
+          <!-- Lettuce -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/toppings icons/lettuce.png" alt="Lettuce">
+            </div>
+            <h2>Lettuce</h2>
+            <button class="plus-button" id="lettuceadd">+</button>
+          </div>
+          <!-- Pickles -->
+          <div class="box">
+            <div class="box-img">
+              <img src="images/toppings icons/pickles.png" alt="Pickles">
+            </div>
+            <h2>Pickles</h2>
+            <button class="plus-button" id="picklesadd">+</button>
+          </div>
+        </div>
+        <div class="choices" id="cheese-choices" style="display: none">
+          <!-- Cheddar -->
+          <div class="box" >
+            <div class="box-img">
+                <img src="images/cheese icons/cheddar.png" alt="Cheddar">
+            </div>
+            <h2>Cheddar</h2>
+            <button class="plus-button" id="cheddaradd">+</button>
+          </div>
+          <!-- Mozzarella -->
+          <div class="box" >
+            <div class="box-img">
+              <img src="images/cheese icons/mozzarella.png" alt="Mozzarella">
+            </div>
+            <h2>Mozzarella</h2>
+            <button class="plus-button" id="mozzarellaadd">+</button>
+          </div>
+          <!-- American Cheese -->
+          <div class="box">
+            <div class="box-img">
+              <img src="images/cheese icons/american cheese.png" alt="American Cheese">
+            </div>
+            <h2>American </h2>
+            <button class="plus-button" id="americancheeseadd">+</button>
+          </div>
+          <!-- Swiss Cheese -->
+          <div class="box">
+            <div class="box-img">
+              <img src="images/cheese icons/swiss.png" alt="Swiss Cheese">
+            </div>
+            <h2>Swiss </h2>
+            <button class="plus-button"  id="swisscheeseadd">+</button>
+          </div>
+        </div>
+      </div>
       
-      <h3>Welcome to our revolutionary burger customization project! 🍔💻</h3>
-      <h2> Crafted using HTML, CSS, and JavaScript, this platform redefines burger customization. Dive into the code that powers your culinary creativity—our backend infrastructure seamlessly handles your selections, while the frontend interface, elegantly designed with HTML/CSS, ensures a smooth, responsive experience.
+      <!-- the plate of the burger -->
+      <div class="">
+        <div class="plate" title="Plate">
+          <div class="burger-bun" >
+            <div class="bun-border"title="Bottom Bun"></div>
+            <div class="bun-top"title="Bottom Bun"></div>
+            
+            <!-- sauces -->
+            <div class="ketchup" id="ketchup" title="Ketchup" style="display: none" ></div>
+            <div class="mayonnaise" id="mayonnaise"title="Mayonnaise" style="display: none"></div>
+            <div class="mustard" id="mustard" title="Mustard" style="display: none" > </div>
+            <div class="hot-sauce" id="hotsauce" title="Hot-sauce" style="display: none"></div>
 
-        Watch as JavaScript brings your burger to life with instant updates as you choose toppings, sauces, and types of meat. This interactive playground merges programming finesse with culinary innovation. . Experience the blend of programming artistry and gourmet delight—your perfect burger is just a click away</h2>
-    <!-- </div> -->
-  </div>
- </section>
- <!-- Kitchen-->  
- <section class="kitchen" id="kitchen">
-  <div class="kitchen-title">
-    <h2>The Kitchen</h2>
-    <p > The kitchen is yours now, you have the power to create the burger of your dreams!</p>
-    
-  
+            <!-- meat -------------------------------------------------------------------------------------------------->
+            <!-- beef -->
+            <div class="meat" id="beef" title="Beef"style="display: none" >
+              <div class="beef-volume" ></div>
+              <div class="beef-slice" ></div>
+            </div>
+            <div class="meat2" id="beef2" title="Beef" style="display: none" >
+              <div class="beef-volume" ></div>
+              <div class="beef-slice" ></div>
+            </div>
+            <div class="meat3" id="beef3" title="Beef"style="display: none">
+              <div class="beef-volume" ></div>
+              <div class="beef-slice" ></div>
+            </div>
 
-  
-  </div>
-  
-  
-  
-  
-  <!-- the choices bar --> 
-    <ul class="choicesbar" id="choicesbar">
-      <li><a title="Sauce" href="#kitchen#sauce-choices"><img class="icon" src="images/icons/saucec-removebg-preview.png" alt="Sauce Icon" id="sauce-icon" data-type="sauce" ></a></li>
-      <li><a title="Meat" href="#kitchen#meat-choices"><img class="icon" src="images/icons/meatc-removebg-preview.png" alt="Meat Icon" id="meat-icon" data-type="meat"></a></li>
-      <li><a title="Toppings" href="#kitchen#toppings-choices"><img class="icon" src="images/icons/toppingsc-removebg-preview.png" alt="Toppings Icon" id="toppings-icon" data-type="toppings"></a></li></a></li>
-      <li><a title="Cheese" href="#kitchen#cheese-choices"><img class="icon" src="images/icons/cheesec-removebg-preview.png" alt="Chesse Icon" id="cheese-icon" data-type="cheese"></a></li></a></li>
-    
-    </ul>
+            <!-- lamb -->
+            <div class="meat" id="lamb" title="lamb"  style="display: none">
+              <div class="lamb-volume"></div>
+              <div class="lamb-slice" ></div>
+            </div>
+            <div class="meat2" id="lamb2" title="Beef" style="display: none" >
+              <div class="lamb-volume"></div>
+              <div class="lamb-slice" ></div>
+            </div>
+            <div class="meat3" id="lamb3" title="Beef"style="display: none">
+              <div class="lamb-volume"></div>
+              <div class="lamb-slice" ></div>
+            </div>
 
+            <!-- chicken -->
+            <div class="meat" id="chicken" title="Chicken"  style="display: none">
+              <div class="chicken-volume"></div>
+              <div class="chicken-slice" ></div>
+            </div>
+            <div class="meat2" id="chicken2" title="Chicken"  style="display: none">
+              <div class="chicken-volume"></div>
+              <div class="chicken-slice" ></div>
+            </div>
+            <div class="meat3" id="chicken3" title="Chicken"  style="display: none">
+              <div class="chicken-volume"></div>
+              <div class="chicken-slice" ></div>
+            </div>
 
-  
-  
+            <!-- turkey -->
+            <div class="meat" id="turkey" title="Turkey"  style="display: none">
+              <div class="turkey-volume"></div>
+              <div class="turkey-slice" ></div>
+            </div>
+            <div class="meat2" id="turkey2" title="Turkey"  style="display: none">
+              <div class="turkey-volume"></div>
+              <div class="turkey-slice" ></div>
+            </div>
+            <div class="meat3" id="turkey3" title="Turkey"  style="display: none">
+              <div class="turkey-volume"></div>
+              <div class="turkey-slice" ></div>
+            </div>
 
-<div class="choices-container" id="choices-container">
-  
-  <!-- sauce choices -->
-  <div class="choices" id="sauce-choices" >
-    <!-- ketchup -->
-    <div class="box"  >
-      <div class="box-img">
-        <img class="boximg" src="images/sauce icons/ketchup.png" alt="Ketchup">
-      </div>
-      <h2>Ketchup</h2>
-      <button class="plus-button" id='ketchupadd'>+</button>
-        
-    </div>
-    <!-- Mayonnaise -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/sauce icons/mayo.png" alt="Mayonnaise">
-      </div>
-      <h2>Mayonnaise</h2>
-      <button class="plus-button" id="mayonnaiseadd" >+</button>
-    </div>
-    <!-- mustard -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/sauce icons/mustard.png" alt="Mustard">
-      </div>
-      <h2>Mustard</h2>
-      <button class="plus-button" id="mustardadd">+</button>
-    </div>
-    <!-- hot sauce -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/sauce icons/hot sauce.png" alt="Hot sauce">
-      </div>
-      <h2>Hot sauce</h2>
-      <button class="plus-button" id="hotsauceadd">+</button>
-    </div>
-  </div>
-   
-  <!-- meat choices -->
-  <div class="choices" id="meat-choices" style="display: none">
-    <!-- beef -->
-    <div class="box" >
-      <div class="box-img">  
-        <img src="images/meat icons/cow.png" alt="Beef">
-      </div>
-      <h2>Beef</h2>
-      <span id="layerCountbeef">0</span>
-      <button class="plus-button-meat" id="beefadd">+</button>
-      <button class="minus-button-meat" id="beefremove">-</button>
-    </div>
-    <!-- lamb -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/meat icons/lamb.png" alt="lamb">
-      </div>
-      <h2>lamb</h2>
-      <span id="layerCountlamb">0</span>
-      <button class="plus-button-meat" id="lambadd">+</button>
-      <button class="minus-button-meat" id="lambremove">-</button>
-      
-    </div>
-    <!-- chicken -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/meat icons/poulet.png" alt="Chicken">
-      </div>
-      <h2>Chicken</h2>
-      <span id="layerCountchicken">0</span>
-      <button class="plus-button-meat"  id="chickenadd" >+</button>
-      <button class="minus-button-meat"  id="chickenremove" >-</button>
-    </div>
-    <!-- turkey -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/meat icons/turkey.png" alt="Turkey">
-      </div>
-      <h2>Turkey</h2>
-      <span id="layerCountturkey">0</span>
-      <button class="plus-button-meat" id="turkeyadd">+</button>
-      <button class="minus-button-meat" id="turkeyremove">-</button>
-    </div>
-  </div>
-  
-  
-  <div class="choices" id="toppings-choices"style="display: none">
-    <!-- onion -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/toppings icons/onion.png" alt="Onion">
-      </div>
-      <h2>Onion</h2>
-      <button class="plus-button" id="onionadd">+</button>
-    </div>
-    <!-- Tomato -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/toppings icons/tomato.png" alt="Tomato">
-      </div>
-      <h2>Tomato</h2>
-      <button class="plus-button" id="tomatoadd">+</button>
-    </div>
-    <!-- Lettuce -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/toppings icons/lettuce.png" alt="Lettuce">
-      </div>
-      <h2>Lettuce</h2>
-      <button class="plus-button" id="lettuceadd">+</button>
-    </div>
-    <!-- Pickles -->
-    <div class="box">
-      <div class="box-img">
-        <img src="images/toppings icons/pickles.png" alt="Pickles">
-      </div>
-      <h2>Pickles</h2>
-      <button class="plus-button" id="picklesadd">+</button>
-    </div>
-  </div>
-  
-  
-  <div class="choices" id="cheese-choices" style="display: none">
-    <!-- Cheddar -->
-    <div class="box" >
-      <div class="box-img">
-          <img src="images/cheese icons/cheddar.png" alt="Cheddar">
-      </div>
-      <h2>Cheddar</h2>
-      <button class="plus-button" id="cheddaradd">+</button>
-    </div>
-    <!-- Mozzarella -->
-    <div class="box" >
-      <div class="box-img">
-        <img src="images/cheese icons/mozzarella.png" alt="Mozzarella">
-      </div>
-      <h2>Mozzarella</h2>
-      <button class="plus-button" id="mozzarellaadd">+</button>
-    </div>
-    <!-- American Cheese -->
-    <div class="box">
-      <div class="box-img">
-        <img src="images/cheese icons/american cheese.png" alt="American Cheese">
-      </div>
-      <h2>American </h2>
-      <button class="plus-button" id="americancheeseadd">+</button>
-    </div>
-    <!-- Swiss Cheese -->
-      <div class="box">
-        <div class="box-img">
-          <img src="images/cheese icons/swiss.png" alt="Swiss Cheese">
-        </div>
-        <h2>Swiss </h2>
-        <button class="plus-button"  id="swisscheeseadd">+</button>
-      </div>
-    </div>
+            <!-- toppings -------------------------------------------------------------------------------------------------->
+            <!-- onion -->
+            <div class="onion" id="onion" title="Onion"style="display: none" >
+              <div class="onion-volume"></div>
+              <div class="onion-slices"></div>
+              <div class="onion layer1"></div>
+              <div class="onion layer2"></div>
+              <div class="onion layer3"></div>
+              <div class="onion layer4"></div>
+              <div class="onion layer5"></div>
+              <div class="onion layer6"></div>
+            </div>
+            <div class="layer2" id="onion2" title="Onion" style="display: none">
+              <div class="onion-volume"></div>
+              <div class="onion-slices"></div>
+              <div class="onion layer1"></div>
+              <div class="onion layer2"></div>
+              <div class="onion layer3"></div>
+              <div class="onion layer4"></div>
+              <div class="onion layer5"></div>
+              <div class="onion layer6"></div>
+            </div>
+            <div class="layer3" id="onion3" title="Onion" style="display: none">
+              <div class="onion-volume"></div>
+              <div class="onion-slices"></div>
+              <div class="onion layer1"></div>
+              <div class="onion layer2"></div>
+              <div class="onion layer3"></div>
+              <div class="onion layer4"></div>
+              <div class="onion layer5"></div>
+              <div class="onion layer6"></div>
+            </div>
 
-  </div>
+            <!-- tomato -->
+            <div class="tomato" id="tomato" title="Tomato" style="display: none">
+              <div class="tomato-volume"></div>
+              <div class="tomato-slices"></div>
+              <div class="tomato-detail1"></div>
+              <div class="tomato-detail2"></div>
+              <div class="tomato-detail3"></div>
+            </div>
+            <div class="layer2" id="tomato2" title="Tomato" style="display: none">
+              <div class="tomato-volume"></div>
+              <div class="tomato-slices"></div>
+              <div class="tomato-detail1"></div>
+              <div class="tomato-detail2"></div>
+              <div class="tomato-detail3"></div>
+            </div>
+            <div class="layer3" id="tomato3" title="Tomato" style="display: none">
+              <div class="tomato-volume"></div>
+              <div class="tomato-slices"></div>
+              <div class="tomato-detail1"></div>
+              <div class="tomato-detail2"></div>
+              <div class="tomato-detail3"></div>
+            </div>
 
+            <!-- lettuce -->
+            <div class="layer1" id="lettuce" title="Lettuce" style="display: none">
+              <div class="lettuce" id="lettuce" title="Lettuce"></div >
+            </div >
+            
+            <div class="layer2" id="lettuce2" title="Lettuce" style="display: none">
+              <div class="lettuce" id="lettuce2" title="Lettuce"></div >
+            </div >
 
+            <div class="layer3" id="lettuce3" title="Lettuce" style="display: none">
+              <div class="lettuce" id="lettuce3" title="Lettuce"></div >
+            </div >
 
+            <!-- pickles -->
+            <div class="layer1" id="pickles" title="Pickles" style="display: none">
+              <div class="pickles" id="pickles" title="Pickles"></div>
+            </div>
+            <div class="layer2" id="pickles2" title="Pickles" style="display: none">
+              <div class="pickles" id="pickles" title="Pickles"></div>
+            </div>
+            <div class="layer3" id="pickles3" title="Pickles" style="display: none">
+              <div class="pickles" id="pickles" title="Pickles"></div>
+            </div>
 
+            <!-- cheese -------------------------------------------------------------------------------------------------->
+            <!-- cheddar -->
+            <div class="layer1" id="cheddar" title="Cheddar" style="display: none">
+              <div class="cheddar" id="cheddar" title="Cheddar"></div>
+            </div>
+            <div class="layer2" id="cheddar2" title="Cheddar" style="display: none">
+              <div class="cheddar" id="cheddar" title="Cheddar"></div>
+            </div>
+            <div class="layer3" id="cheddar3" title="Cheddar" style="display: none">
+              <div class="cheddar" id="cheddar" title="Cheddar"></div>
+            </div>
 
+            <!-- mozzarella -->
+            <div class="layer1" id="mozzarella" title="Mozzarella" style="display: none">
+              <div class="mozzarella" id="mozzarella" title="Mozzarella"></div>
+            </div>
+            <div class="layer2" id="mozzarella2" title="Mozzarella" style="display: none">
+              <div class="mozzarella" id="mozzarella" title="Mozzarella"></div>
+            </div>
+            <div class="layer3" id="mozzarella3" title="Mozzarella" style="display: none">
+              <div class="mozzarella" id="mozzarella" title="Mozzarella"></div>
+            </div>
 
+            <!-- american -->
+            <div class="layer1" id="americancheese" title="American cheese"  style="display: none">
+              <div class="american" id="americancheese" title="American cheese" ></div>
+            </div>
+            <div class="layer2" id="americancheese2" title="American cheese"  style="display: none">
+              <div class="american" id="americancheese" title="American cheese" ></div>
+            </div>
+            <div class="layer3" id="americancheese3" title="American cheese"  style="display: none">
+              <div class="american" id="americancheese" title="American cheese" ></div>
+            </div>
 
-
-  <!-- the plate of the burger -->
-  <div class="">
-    <div class="plate" title="Plate">
-      <div class="burger-bun" >
-        <div class="bun-border"title="Bottom Bun"></div>
-		    <div class="bun-top"title="Bottom Bun"></div>
-          <!-- sauces -->
-        <div class="ketchup" id="ketchup" title="Ketchup" style="display: none" ></div>
-        <div class="mayonnaise" id="mayonnaise"title="Mayonnaise" style="display: none"></div>
-			  <div class="mustard" id="mustard" title="Mustard" style="display: none" > </div>
-        <div class="hot-sauce" id="hotsauce" title="Hot-sauce" style="display: none"></div>
-
-        <!-- meat -->
-        <!-- beef -->
-        <div class="meat" id="beef" title="Beef"style="display: none" >
-          <div class="beef-volume" ></div>
-          <div class="beef-slice" ></div>
-        </div>
-        <div class="meat2" id="beef2" title="Beef" style="display: none" >
-          <div class="beef-volume" ></div>
-          <div class="beef-slice" ></div>
-        </div>
-        <div class="meat3" id="beef3" title="Beef"style="display: none">
-          <div class="beef-volume" ></div>
-          <div class="beef-slice" ></div>
-        </div>
-
-
-        <!-- lamb -->
-        <div class="meat" id="lamb" title="lamb"  style="display: none">
-          <div class="lamb-volume"></div>
-          <div class="lamb-slice" ></div>
-        </div>
-        <div class="meat2" id="lamb2" title="Beef" style="display: none" >
-          <div class="lamb-volume"></div>
-          <div class="lamb-slice" ></div>
-        </div>
-        <div class="meat3" id="lamb3" title="Beef"style="display: none">
-          <div class="lamb-volume"></div>
-          <div class="lamb-slice" ></div>
-        </div>
-
-        
-
-        <!-- chicken -->
-        <div class="meat" id="chicken" title="Chicken"  style="display: none">
-          <div class="chicken-volume"></div>
-          <div class="chicken-slice" ></div>
-        </div>
-        <div class="meat2" id="chicken2" title="Chicken"  style="display: none">
-          <div class="chicken-volume"></div>
-          <div class="chicken-slice" ></div>
-        </div>
-        <div class="meat3" id="chicken3" title="Chicken"  style="display: none">
-          <div class="chicken-volume"></div>
-          <div class="chicken-slice" ></div>
-        </div>
-
-
-
-        <!-- turkey -->
-        <div class="meat" id="turkey" title="Turkey"  style="display: none">
-          <div class="turkey-volume"></div>
-          <div class="turkey-slice" ></div>
-        </div>
-        <div class="meat2" id="turkey2" title="Turkey"  style="display: none">
-          <div class="turkey-volume"></div>
-          <div class="turkey-slice" ></div>
-        </div>
-        <div class="meat3" id="turkey3" title="Turkey"  style="display: none">
-          <div class="turkey-volume"></div>
-          <div class="turkey-slice" ></div>
-        </div>
-        
-
-          <!-- toppings -------------------------------------------------------------------------------------------------->
-          <!-- onion -->
-        <div class="onion" id="onion" title="Onion"style="display: none" >
-          <div class="onion-volume"></div>
-          <div class="onion-slices"></div>
-          <div class="onion layer1"></div>
-          <div class="onion layer2"></div>
-          <div class="onion layer3"></div>
-          <div class="onion layer4"></div>
-          <div class="onion layer5"></div>
-          <div class="onion layer6"></div>
-        </div>
-        <div class="layer2" id="onion2" title="Onion" style="display: none">
-          <div class="onion-volume"></div>
-          <div class="onion-slices"></div>
-          <div class="onion layer1"></div>
-          <div class="onion layer2"></div>
-          <div class="onion layer3"></div>
-          <div class="onion layer4"></div>
-          <div class="onion layer5"></div>
-          <div class="onion layer6"></div>
-        </div>
-        <div class="layer3" id="onion3" title="Onion" style="display: none">
-          <div class="onion-volume"></div>
-          <div class="onion-slices"></div>
-          <div class="onion layer1"></div>
-          <div class="onion layer2"></div>
-          <div class="onion layer3"></div>
-          <div class="onion layer4"></div>
-          <div class="onion layer5"></div>
-          <div class="onion layer6"></div>
-        </div>
-
-
-        <!-- tomato -->
-        <div class="tomato" id="tomato" title="Tomato" style="display: none">
-          <div class="tomato-volume"></div>
-          <div class="tomato-slices"></div>
-          <div class="tomato-detail1"></div>
-          <div class="tomato-detail2"></div>
-          <div class="tomato-detail3"></div>
-        </div>
-        <div class="layer2" id="tomato2" title="Tomato" style="display: none">
-          <div class="tomato-volume"></div>
-          <div class="tomato-slices"></div>
-          <div class="tomato-detail1"></div>
-          <div class="tomato-detail2"></div>
-          <div class="tomato-detail3"></div>
-        </div>
-        <div class="layer3" id="tomato3" title="Tomato" style="display: none">
-          <div class="tomato-volume"></div>
-          <div class="tomato-slices"></div>
-          <div class="tomato-detail1"></div>
-          <div class="tomato-detail2"></div>
-          <div class="tomato-detail3"></div>
-        </div>
-
-
-        <!-- lettuce -->
-        <div class="layer1" id="lettuce" title="Lettuce" style="display: none">
-          <div class="lettuce" id="lettuce" title="Lettuce"></div >
-        </div >
-        
-        <div class="layer2" id="lettuce2" title="Lettuce" style="display: none">
-          <div class="lettuce" id="lettuce2" title="Lettuce"></div >
-        </div >
-
-        <div class="layer3" id="lettuce3" title="Lettuce" style="display: none">
-          <div class="lettuce" id="lettuce3" title="Lettuce"></div >
-        </div >
-
-
-      <!-- pickles -->
-        <div class="layer1" id="pickles" title="Pickles" style="display: none">
-          <div class="pickles" id="pickles" title="Pickles"></div>
-        </div>
-        <div class="layer2" id="pickles2" title="Pickles" style="display: none">
-          <div class="pickles" id="pickles" title="Pickles"></div>
-        </div>
-        <div class="layer3" id="pickles3" title="Pickles" style="display: none">
-          <div class="pickles" id="pickles" title="Pickles"></div>
-        
-        </div>
-
-
-        <!-- cheese -->
-        <!-- cheddar -->
-        <div class="layer1" id="cheddar" title="Cheddar" style="display: none">
-          <div class="cheddar" id="cheddar" title="Cheddar"></div>
-        </div>
-        <div class="layer2" id="cheddar2" title="Cheddar" style="display: none">
-          <div class="cheddar" id="cheddar" title="Cheddar"></div>
-        </div>
-        <div class="layer3" id="cheddar3" title="Cheddar" style="display: none">
-          <div class="cheddar" id="cheddar" title="Cheddar"></div>
-        </div>
-
-        <!-- mozzarella -->
-        <div class="layer1" id="mozzarella" title="Mozzarella" style="display: none">
-          <div class="mozzarella" id="mozzarella" title="Mozzarella"></div>
-        </div>
-        <div class="layer2" id="mozzarella2" title="Mozzarella" style="display: none">
-          <div class="mozzarella" id="mozzarella" title="Mozzarella"></div>
-        </div>
-        <div class="layer3" id="mozzarella3" title="Mozzarella" style="display: none">
-          <div class="mozzarella" id="mozzarella" title="Mozzarella"></div>
-        </div>
-
-        <!-- american -->
-        <div class="layer1" id="americancheese" title="American cheese"  style="display: none">
-          <div class="american" id="americancheese" title="American cheese" ></div>
-        </div>
-        <div class="layer2" id="americancheese2" title="American cheese"  style="display: none">
-          <div class="american" id="americancheese" title="American cheese" ></div>
-        </div>
-        <div class="layer3" id="americancheese3" title="American cheese"  style="display: none">
-          <div class="american" id="americancheese" title="American cheese" ></div>
-        </div>
-
-        <!-- swiss -->
-        <div class="layer1" id="swisscheese" title="Swiss cheese"  style="display: none">
-          <div class="swiss" id="swisscheese" title="Swiss cheese"></div>
-        </div>
-        <div class="layer2" id="swisscheese2" title="Swiss cheese"  style="display: none">
-          <div class="swiss" id="swisscheese" title="Swiss cheese"></div>
-        </div>
-        <div class="layer3" id="swisscheese3" title="Swiss cheese"  style="display: none">
-          <div class="swiss" id="swisscheese" title="Swiss cheese"></div>
-        </div>
+            <!-- swiss -->
+            <div class="layer1" id="swisscheese" title="Swiss cheese"  style="display: none">
+              <div class="swiss" id="swisscheese" title="Swiss cheese"></div>
+            </div>
+            <div class="layer2" id="swisscheese2" title="Swiss cheese"  style="display: none">
+              <div class="swiss" id="swisscheese" title="Swiss cheese"></div>
+            </div>
+            <div class="layer3" id="swisscheese3" title="Swiss cheese"  style="display: none">
+              <div class="swiss" id="swisscheese" title="Swiss cheese"></div>
+            </div>
           
 
-        <!-- final layer -->
-        <div class="burger-top" id="burgertop" title="top bun" style="display: none"></div>
-        <div class="layer2" id="burgertop2" title="top bun" style="display: none" >
-          <div class="burger-top" id="burgertop" title="top bun"></div>
+            <!-- final layer-------------------------------------------------------------------------------------------------->
+            <div class="burger-top" id="burgertop" title="top bun" style="display: none"></div>
+            <div class="layer2" id="burgertop2" title="top bun" style="display: none" >
+              <div class="burger-top" id="burgertop" title="top bun"></div>
+            </div>
+            <div class="layer3" id="burgertop3" title="top bun"  style="display: none">
+              <div class="burger-top" id="burgertop" title="top bun"></div>
+            </div>
+
+            <!-- sesame -->
+            <div class="sesame" id="sesame" title="Sesame"  style="display: none"></div>
+            <div class="layer2" id="sesame2" style="display: none" >
+              <div class="sesame" id="sesame"></div>
+            </div>
+            <div class="layer3" id="sesame3"   style="display: none">
+              <div class="sesame" id="sesame" ></div>
+            </div>
+          </div>
         </div>
-        <div class="layer3" id="burgertop3" title="top bun"  style="display: none">
-          <div class="burger-top" id="burgertop" title="top bun"></div>
-        </div>
-
-        <div class="sesame" id="sesame" title="Sesame"  style="display: none"></div>
-        <div class="layer2" id="sesame2" style="display: none" >
-          <div class="sesame" id="sesame"></div>
-        </div>
-        <div class="layer3" id="sesame3"   style="display: none">
-          <div class="sesame" id="sesame" ></div>
-        </div>
-
-        
-
-
-
-        
       </div>
+      <button class="button"  id="finishbutton" title="Place the Top Bun" >Finish Burger</button>
+      <div class="congrat" id="congrat" style="display: none;">
+        <h2> Congratulations!</h2> 
+        <p>Your delicious burger is now ready to be savored. <br><i>Bon appétit!</i> </p>
+        <button class="downloadButton" id="downloadButton"title="Take a Picture of Your Burger" >Save 📸</button>
+        <button  onclick="refreshPage()" class="anothertryButton" title="Make Another Awesome Burger" id="anothertryButton" >Another Try 🍔</button>
+      </div>
+      <div class="shine" id="shine" style="display: none;">
+        <img src="images/star.png" alt="">
+      </div>
+      <canvas class="burgerCanvas" id="burgerCanvas" style="display: none;"></canvas>
+    </section>
 
-    </div>
-  </div>
-  <button class="button"  id="finishbutton" title="Place the Top Bun" >Finish Burger</button>
-  <!-- <button class="button"  id="next1" title="Meat Choices" >Next Step</button>
-  <button class="button"  id="next2" title="Toppings Choices" style="display: none;">Next Step</button>
-  <button class="button"  id="next3" title="Cheese Choices" style="display: none;">Next Step</button> -->
-  <div class="congrat" id="congrat" style="display: none;">
-    <h2> Congratulations!</h2> 
-    <p>Your delicious burger is now ready to be savored. <br><i>Bon appétit!</i> </p>
-    <button class="downloadButton" id="downloadButton"title="Take a Picture of Your Burger" >Save 📸</button>
-    <button  onclick="refreshPage()" class="anothertryButton" title="Make Another Awesome Burger" id="anothertryButton" >Another Try 🍔</button>
-  </div>
-  <div class="shine" id="shine" style="display: none;">
-    <img src="images/star.png" alt="">
-  </div>
-  
-  
-  <canvas class="burgerCanvas" id="burgerCanvas" style="display: none;"></canvas>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- Codes-->
-<!-- <section class="codes" id="codes">
-
-</section> -->
-
-
-
-
-<!-- Credit-->
-<!-- <section class="credit" id="credit"></section>
-  -->
-
-
-  <!-- LINK TO JS -->
-  <script src="main.js"></script>
-</body>
+    <!-- LINK TO JS -->
+    <script src="main.js"></script>
+  </body>
 </html>
