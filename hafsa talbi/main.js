@@ -70,6 +70,7 @@ function updateLayerCount(elementName) {
   layerCounts[elementName].textContent = layerCountsMap[elementName];
 }
 
+
 // Function to update buttons
 function updateButtons(elementName) {
   const addBtn = document.getElementById(`${elementName}add`);
@@ -78,6 +79,7 @@ function updateButtons(elementName) {
   addBtn.disabled = layerCountsMap[elementName] === 3;
   removeBtn.disabled = layerCountsMap[elementName] === 0;
 }
+
 
 
 // Function to handle adding layers and reset other types
@@ -95,6 +97,7 @@ function addLayer(elementArray, elementName) {
     }
   });
 
+  
   // Add layers for the selected type
   const currentLayer = layerCountsMap[elementName];
   elementArray[currentLayer].style.display = 'block';
