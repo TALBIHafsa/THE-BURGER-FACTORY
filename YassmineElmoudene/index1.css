@@ -1,0 +1,475 @@
+*{
+   padding: 0;
+   margin: 0; 
+}
+header{
+    background-color:yellowgreen;
+    color:#fff;
+    padding:15px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+body{
+    background-color:#f5e8df;
+    overflow: hidden;
+}
+h2{
+    text-align: center;
+    color:white;
+    left:10px;
+}
+.circle{
+    position:relative;
+    width: 100px;
+    height: 100px;
+    border-radius:25%;
+    overflow: visible;
+    margin:3px;
+    cursor:pointer;
+    justify-content: center;
+    z-index:1;
+}
+.circle img{
+   width:100%;
+   height:100%;
+   object-fit: cover;
+}
+#Choices-container1{
+   position: absolute;
+   width:140px;
+   height:140px;
+   top: 140%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color:rgb(50, 194, 50);
+   display:none;
+   border-radius:8px;
+}
+#Choices-container2{
+   position: absolute;
+   width:140px;
+   height:140px;
+   top: 140%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color:rgb(50, 194, 50);
+   display:none;
+   border-radius:8px;
+}
+#Choices-container3{
+   position: absolute;
+   width:140px;
+   height:140px;
+   top: 140%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color:rgb(50, 194, 50);
+   display:none;
+   border-radius:8px;
+}
+#Choices-container4{
+position: absolute;
+width:140px;
+height:140px;
+top: 140%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color:rgb(50, 194, 50);
+display:none;
+border-radius:8px;
+}
+.choice img{
+border-radius:20%;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+position:absolute;
+width: 50px;
+height: 50px; 
+cursor: pointer;
+transition: transform 0.2s ease-in-out;
+}
+#mayonnaiseadd img{
+position:absolute;
+left: 3px;
+top:3px;
+cursor:pointer;
+}
+#Ketchupadd img{
+position:absolute;
+left:58px;
+top:3px;
+cursor:pointer;
+}
+#SOYadd img{
+position:absolute;
+left:3px;
+top:55px;
+cursor:pointer;
+}
+#Hotsauceadd img{
+position:absolute;
+left:58px;
+top:55px;
+cursor:pointer;
+}
+#tomatoadd img{
+position:absolute;
+left: 3px;
+top:3px;
+cursor:pointer;
+}
+#onionadd img{
+position:absolute;
+left:58px;
+top:3px;
+cursor:pointer;
+}
+#lettuceadd img{
+position:absolute;
+left:3px;
+top:55px;
+cursor:pointer;
+}
+#pickleadd img{
+position:absolute;
+left:58px;
+top:55px;
+cursor:pointer;
+}
+#beefadd img{
+position:absolute;
+left:58px;
+top:3px;
+cursor:pointer;
+}
+#laamadd img{
+position:absolute;
+left: 3px;
+top:3px;
+cursor:pointer;
+}
+#veganMeatadd img{
+position:absolute;
+left:3px;
+top:55px;
+cursor:pointer;
+}
+#meataadd img{
+position:absolute;
+left:58px;
+top:55px;
+cursor:pointer;
+}
+#americanadd img{
+position:absolute;
+left:58px;
+top:3px;
+cursor:pointer;
+}
+#edamadd img{
+position:absolute;
+left:3px;
+top:3px;
+cursor:pointer;
+}
+#mozarellaadd img{
+position:absolute;
+left:3px;
+top:55px;
+cursor:pointer;
+}
+#roquefortadd img{
+position:absolute;
+left:58px;
+top:55px;
+cursor:pointer;
+}
+.Burger{
+    display: flex;
+    flex-direction: column;
+    margin: 0 -80px;
+    position: relative;
+}
+
+.sub_ingredient{
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+.bottombread{
+position:relative;
+height: 80px;
+width: 356px;
+background-color: #ff9933;
+border-radius: 100% 100% 75% 75%;
+} 
+.bottomtop{
+position: absolute;
+height: 50px;
+width:356px;
+top:0;
+left: 0;
+background-color:#ffbf80;
+border-radius:100% 100% 75% 75%;
+}
+.mayonnaise{
+    background-color: #fad59f;
+    height:70px;
+    width:353px;
+    border-radius:100% 100% 80% 80% ;
+    transform:rotateX(45deg);
+    }
+.Ketchup{
+    background-color: rgb(190, 42, 42);
+    height:70px;
+    width:353px;
+    border-radius:100% 100% 80% 80% ;
+    transform:rotateX(45deg);
+    }
+.soy{
+    background-color: rgb(135, 110, 110);
+    height:70px;
+    width:353px;
+    border-radius:100% 100% 80% 80% ;
+    transform:rotateX(45deg);
+}
+.chili-sauce{
+    height:70px;
+    width:353px;
+    border-radius:100% 100% 80% 80% ;
+    transform:rotateX(45deg);
+    background-color:#f50;
+}
+.beef{
+height:60px;
+width:356px;
+border-radius:100% 100% 75% 75%;
+background-color:#613203;
+}
+.laam{
+height:60px;
+width:356px;
+border-radius:100% 100% 75% 75%;
+background-color:#8f5820;
+}
+.veganMeat{
+height:60px;
+width:356px;
+border-radius:100% 100% 75% 75%;
+background-color:#d19559;
+}
+.meata{
+height:60px;
+width:356px;
+border-radius:100% 100% 75% 75%;
+background-color:#4c2907;
+}
+.onion{
+width: 100px;
+height: 70px;
+background-color: #c868d2;
+border-radius: 50%; 
+box-shadow: 200px 50px 0 #c868d2;
+transform:rotateX(80deg);
+}
+.onion:before{
+content: '';
+position: absolute;
+width: 100px;
+height: 60px;
+background-color: #c494c2;
+border-radius: 50%;
+box-shadow: 200px 50px 0 #c494c2;
+}
+.onion:after{
+content: '';
+position: absolute;
+width: 50px;
+height: 33px;
+top: 25px;
+left: 25px;
+background-color: #d4cad2;
+border-radius: 50%;
+box-shadow: 200px 50px 0 #d4cad2;
+}
+.tomato{
+background-color: #a00505;
+height:70px;
+width:353px;
+border-radius:100% 100% 80% 80% ;
+transform:rotateX(45deg);
+}
+.tomato:after{
+content: '';
+position:absolute;
+height:55px;
+width:353px;
+top:2px;
+background-color:#ff0808;
+border-radius:100%;
+}
+.pickle{
+    height: 70px;
+    width: 95px;
+    background-color: green;
+    border-radius: 50%;
+    transform:rotateX(80deg);
+    box-shadow: 150px  20px  0 green;
+    }
+.pickle:after{
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 90px;
+    top:5px;
+    left:3px;
+    background-color:rgb(202, 226, 202);
+    border-radius:50%;
+    box-shadow: 150px  20px  0 rgb(202, 226, 202);
+}
+.lettuce{
+width: 360px;
+height: 70px;
+background-color: #0d4;
+border-radius: 50% 50% 5% 50%;
+transform: rotateX(65deg);
+}
+.edam{
+    width: 360px;
+    height: 65px;
+    background-color: #ff0;
+    border-radius: 25%; 
+    transform: rotateX(55deg);
+    }
+.american{
+    width: 360px;
+    height: 65px;
+    background-color: rgb(241, 241, 137);
+    border-radius: 25%; 
+    transform: rotateX(65deg);
+}
+.mozarella{
+    width: 360px;
+    height: 65px;
+    background-color: white;
+    border-radius: 25%; 
+    transform: rotateX(65deg);
+}
+.roquefort{
+    width: 360px;
+    height: 65px;
+    background-color: rgb(222, 222, 212);
+    border-radius: 25%; 
+    transform: rotateX(65deg);
+}
+.button{
+background-color:yellowgreen;
+color:white;
+padding:10px 20px;
+border-radius:10px;
+font-size:1.2em;
+position:absolute;
+cursor:pointer;
+top:70%;
+right:20%;
+}
+.button:hover{
+background-color:green;
+}
+.dropdown{
+position:relative;
+display: inline-block;
+}
+.dropdown-content{
+display:none;
+position:absolute;
+background-color:green;
+min-width:160px;
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+z-index:1;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+li button{
+border:none;
+background-color: green;
+color:white;
+font-size: 13px;
+cursor:pointer;
+}
+li button:hover{
+color:yellowgreen;
+}
+.topbread{
+    width: 356px;
+    height: 100px;
+    background-color:#ff9933;
+    border-radius: 100% 100% 75% 75%;
+    z-index:1;
+    transform:translateY(-28px);
+    margin-bottom:-60px;
+}
+.end{
+        position:absolute;
+        left:80%;
+        top:83%;
+        background-color:greenyellow;
+        color:white;
+        padding:10px 20px;
+        border-radius:10px;
+        font-size:1.2em;
+        cursor:pointer;
+        border:none;
+}
+.end:hover{
+        background-color:#0d4;
+}
+.refaire{
+        position:absolute;
+        left:89%;
+        top:89%;
+        background-color:rgb(255, 106, 47);
+        color:white;
+        padding:10px 20px;
+        border-radius:10px;
+        font-size:1.2em;
+        cursor:pointer;
+        border:none;
+}
+.refaire:hover{
+        background-color:rgb(170, 54, 8);
+}
+.container{
+        width: 100vw;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.send{
+    position:absolute;
+    left:89%;
+    top:30%;
+    background-color:rgb(68, 255, 47);
+    color:white;
+    padding:10px 20px;
+    border-radius:10px;
+    font-size:1.2em;
+    cursor:pointer;
+    border:none;
+}
+.send:hover{
+    background-color:green;
+}
+
+
+
+
+
+
+
+

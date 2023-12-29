@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charest="UTF-8">
+    <meta name="viewport" content=" width=device-width,initial-scale=1.0">
+    <link rel="icon" href="res\images/BurFacLOGO.jpg">
+    <title>The Burger Factory</title>
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+    <header><h2><em>Choose Ingredients</em></h2>
+        <div class="circle" id="circle1" onclick="optionBar1()">
+          <img src="res\images/sauces.png" alt="Sauces">
+          <div id="Choices-container1">
+               <div class="choice" id="Mayoadd"><img src="res\images/mayonnaise.png" onclick="addIngredient('mayonnaise')"></div>
+               <div class="choice" id="Ketchupadd" ><img src="res\images/ketchup .png" onclick="addIngredient('Ketchup')"></div>
+               <div class="choice" id="SOYadd"><img src="res\images/soy.png" onclick="addIngredient('soy')"></div>
+               <div class="choice" id="Hotsauceadd"><img src="res\images/chili-sauce.png" onclick="addIngredient('chili-sauce')"></div>
+          </div>
+        </div>
+        <div class="circle" id="circle2" onclick="optionBar2()">
+          <img src="res\images/vegetable.png">
+          <div id="Choices-container2">
+            <div class="choice" id="tomatoadd"><img src="res\images/tomato.png" onclick="addIngredient('tomato')"></div>
+            <div class="choice" id="onionadd" ><img src="res\images/onion.png" onclick="addIngredient('onion')"></div>
+            <div class="choice" id="lettuceadd"><img src="res\images/lettuce.png" onclick="addIngredient('lettuce')"></div>
+            <div class="choice" id="pickleadd" ><img src="res\images/pickle.png" onclick="addIngredient('pickle')"></div>
+          </div>
+        </div>
+        <div class="circle" id="circle3" onclick="optionBar3()">
+           <img src="res\images/cheese.png">
+           <div id="Choices-container3">
+               <div class="choice" id="americanadd"><img  src="res\images/american.png" onclick="addIngredient('american')"></div>
+               <div class="choice" id="edamadd"><img src="res\images/edam.png" onclick="addIngredient('edam')"></div>
+               <div class="choice" id="mozarellaadd"><img  src="res\images/mozarella .png" onclick="addIngredient('mozarella')"></div>
+               <div class="choice" id="roquefortadd"><img src="res\images/roquefort.png" onclick="addIngredient('roquefort')"></div>
+        </div>
+        </div>
+        <div class="circle" id="circle4" onclick="optionBar4()">
+           <img src="res\images/Meat.png">
+           <div id="Choices-container4">
+               <div class="choice" id="beefadd"><img src="res\images/beef.png" onclick="addIngredient('beef')"></div>
+               <div class="choice" id="laamadd"><img src="res\images/laam.png" onclick="addIngredient('laam')"></div>
+               <div class="choice" id="veganMeatadd"><img src="res\images/veganMeat.png" onclick="addIngredient('veganMeat')"></div>
+               <div class="choice" id="meataadd"><img src="res\images/meata.png" onclick="addIngredient('meata')"></div>
+        </div>
+        </div>
+    </header>
+
+    <div class="container">
+      <div class="Burger" id="Burger">
+          <div class="bottombread" id="bottombread">
+              <div class="bottomtop" id="bottomtop"></div>
+          </div>
+      </div>
+    </div>
+    <button class="end" id="end" onclick="addIngredient('topbread')">End</button>
+    <button class="refaire" id="refaire" onclick="reloadPage()">Remake</button>
+    <form action="http://127.0.0.1:5500/index3.html">
+      <button class="send" id="send" >Send</button>
+    </form>
+  <script src="index1.js"></script>
+</body>
+</html>
+
